@@ -1,0 +1,166 @@
+{
+  "info": {
+    "_postman_id": "9023078e-6bdf-416f-81ff-eb20b558ea1a",
+    "name": "BFF",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Find Characters - nameStartsWith",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "offset",
+            "value": "0",
+            "type": "default"
+          },
+          {
+            "key": "limit",
+            "value": "20",
+            "type": "default"
+          }
+        ],
+        "url": {
+          "raw": "{{url_bff}}/characters?nameStartsWith=captain",
+          "host": [
+            "{{url_bff}}"
+          ],
+          "path": [
+            "characters"
+          ],
+          "query": [
+            {
+              "key": "nameStartsWith",
+              "value": "captain"
+            }
+          ]
+        }
+      },
+      "response": [
+
+      ]
+    },
+    {
+      "name": "GET - FInd Characters - name",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "offset",
+            "value": "0",
+            "type": "default"
+          },
+          {
+            "key": "limit",
+            "value": "20",
+            "type": "default"
+          }
+        ],
+        "url": {
+          "raw": "{{url_bff}}/characters?name=thor",
+          "host": [
+            "{{url_bff}}"
+          ],
+          "path": [
+            "characters"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "thor"
+            }
+          ]
+        }
+      },
+      "response": [
+
+      ]
+    },
+    {
+      "name": "POST - Create Character",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "offset",
+            "value": "0",
+            "type": "default"
+          },
+          {
+            "key": "limit",
+            "value": "20",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": null,\r\n    \"name\": null,\r\n    \"description\": null,\r\n    \"modified\": null,\r\n    \"thumbnail\": null,\r\n    \"urls\": null\r\n}"
+        },
+        "url": {
+          "raw": "{{url_bff}}/characters",
+          "host": [
+            "{{url_bff}}"
+          ],
+          "path": [
+            "characters"
+          ]
+        }
+      },
+      "response": [
+
+      ]
+    },
+    {
+      "name": "GET - Find Image Characters - name",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "image/jpeg",
+            "type": "default"
+          },
+          {
+            "key": "offset",
+            "value": "0",
+            "type": "default"
+          }
+        ],
+        "url": {
+          "raw": "{{url_bff}}/characters?name=thor",
+          "host": [
+            "{{url_bff}}"
+          ],
+          "path": [
+            "characters"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "thor"
+            }
+          ]
+        }
+      },
+      "response": [
+
+      ]
+    }
+  ]
+}
